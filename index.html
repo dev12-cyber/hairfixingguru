@@ -1,0 +1,1659 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hair Fixing Guru</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/hairfixingguru.jpg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.html">
+    <!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- bxslider css -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!-- magnific popup css -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Bootstrap Touchspin css -->
+    <link rel="stylesheet" href="css/jquery.bootstrap-touchspin.min.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr css -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        iframe {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating WhatsApp & Call Buttons -->
+<div class="floating-btns">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/917088553346?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20services"
+     class="float-btn whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+
+  <!-- Call -->
+  <a href="tel:+917088553346" class="float-btn call" aria-label="Call Now">
+    <i class="fa fa-phone"></i>
+  </a>
+</div>
+
+<!-- Premium Offer Popup -->
+<div id="promoPopup" class="promo-popup">
+  <div class="promo-box">
+    <img src="images/logo/hairfixingguru.jpg" alt="Logo" class="promo-logo">
+    <span class="close-promo">&times;</span>
+
+    <img src="images/about/refitting.jpg" alt="Hair Patch Offer" class="promo-img">
+
+    <h2>✨ Exclusive Offer ✨</h2>
+    <h3>Patches Starting at ₹2999</h3>
+    <p>Transform your look with premium hair patches — natural, lightweight, and long-lasting.</p>
+  <a href="https://wa.me/917088553346?text=Hi!%20I%20want%20to%20grab%20the%20offer%20for%20hair%20patches." 
+   class="btn1" 
+   target="_blank">
+   <span>Grab Offer</span>
+</a>
+
+  </div>
+</div>
+
+<script>
+  // Show popup after 2 seconds
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('promoPopup').classList.add('show');
+    }, 2000);
+  });
+
+  // Close popup on click of X or outside box
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('close-promo') || e.target.id === 'promoPopup') {
+      document.getElementById('promoPopup').classList.remove('show');
+    }
+  });
+</script>
+
+<style>
+/* =============================
+   FIXED POPUP STYLING
+============================= */
+
+/* Popup overlay */
+.promo-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 9999999 !important; /* ✅ TOPMOST LAYER */
+}
+
+/* Show state */
+.promo-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup box — perfectly centered */
+.promo-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(145deg, #010d1e, #0b1c36);
+  border-radius: 20px;
+  padding: 45px 35px 35px;
+  text-align: center;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+  border: 2px solid #cf9c67;
+  z-index: 10000000 !important; /* ✅ Above all elements */
+  animation: zoomIn 0.6s ease;
+}
+
+/* Logo */
+.promo-logo {
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  width: 80px;
+  height: auto;
+}
+
+/* Close Button */
+.close-promo {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  color: #cf9c67;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  z-index: 10000001;
+}
+.close-promo:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: #fff;
+}
+
+/* Image */
+.promo-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+.promo-box h2 {
+  color: #cf9c67;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.promo-box h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.promo-box p {
+  font-size: 16px;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Keep your existing button */
+.promo-box .btn1 {
+  margin-top: 10px;
+}
+
+/* Animation */
+@keyframes zoomIn {
+  0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .promo-box {
+    padding: 30px 20px;
+  }
+  .promo-box h2 { font-size: 22px; }
+  .promo-box h3 { font-size: 18px; }
+  .promo-box p { font-size: 14px; }
+  .promo-logo { width: 60px; top: 15px; left: 18px; }
+}
+</style>
+
+
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!--Preloader area start>
+        <div id="loader_wrapper">
+            <div class="loader"></div>
+        </div>
+        <!Preloader area end-->
+
+    <!--Header area start here-->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="header-top">
+                        <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12 pd-0">
+                            <div class="contact-info-top">
+                                <ul class="list-inline">
+                                    <li><img src="images/icons/5.png" alt="" /><span>Meerut & Noida</span></li>
+                                    <li><img src="images/icons/6.png" alt="" /><span>+91-7088553346</span></li>
+                                    <li><img src="images/icons/7.png" alt="" /><span>aman@hairfixingguru.com</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12 pd-0">
+                           <div class="top-button text-right">
+    <a href="https://wa.me/917088553346" target="_blank" class="btn4">
+        <span>Book Now</span>
+    </a>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="main-header">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <div class="logo-area">
+                                    <a href="index.html"><img src="images/logo/hairfixingguru.jpg" alt="hairfixingguru" height="90px" width="100px"/></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                <div class="menu-area">
+                                    <nav>
+                                        <ul class="list-inline">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li class="drop-menu">
+   <a href="javascript:void(0)">Services</a>
+<ul class="down-menu">
+  <li><a href="hair-replacement-systems.html">Hair Replacement</a></li>
+  <li><a href="hair-fixing-bonding.html">Hair Fixing / Bonding</a></li>
+  <li><a href="hair-clipping.html">Hair Clipping / Taping / Weaving</a></li>
+
+  <li><a href="hair-extensions.html">Hair Extensions</a></li>
+ 
+  <li><a href="hair-patch-maintenance.html">Hair Patch Maintenance & Refitting</a></li>
+</ul>
+
+  <li><a href="products.html">Products</a></li>
+                                            <li><a href="gallery.html">Gallery </a></li>
+                                          
+                                          
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li class="menu-btn">
+                                             
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="search-box">
+                                    <form>
+                                        <input type="search" placeholder="">
+                                        <button><i class="fa fa-search"></i></button>
+                                        <span class="close-search"><i class="fa fa-close"></i></span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Responsive Menu area-->
+        <div class="mobile-menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mobile-menu">
+                            <nav id="dropdown">
+                                  <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li class="drop-menu">
+    <a href="javascript:void(0)">Services</a>
+   <ul class="down-menu">
+  <li><a href="hair-replacement-systems.html">Hair Replacement</a></li>
+  <li><a href="hair-fixing-bonding.html">Hair Fixing / Bonding</a></li>
+  <li><a href="hair-clipping.html">Hair Clipping / Taping / Weaving</a></li>
+
+  <li><a href="hair-extensions.html">Hair Extensions</a></li>
+ 
+  <li><a href="hair-patch-maintenance.html">Hair Patch Maintenance & Refitting</a></li>
+</ul>
+  </li>
+  <li><a href="products.html">Products</a></li>
+                                            <li><a href="gallery.html">Gallery </a></li>
+                                          
+                                          
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li class="menu-btn">
+                                             
+                                            </li>
+                                        </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Responsive Menu area End-->
+    </header>
+    <!--Header area end here-->
+    <!--Slider area start here-->
+    <section class="slider-area">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+
+          <!-- ✅ Slide 1 -->
+<!-- ✅ Slide 1 -->
+<!-- ✅ Slide 1 -->
+<div class="item active"> 
+  <div class="carousel-captions caption-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="content">
+            <h2 class="wow animated fadeInLeft" data-wow-duration="1s">
+              <span>Hair Fixing Guru</span> – Expert in<br>
+              <span>Hair Replacement </span>
+            </h2>
+            <p class="wow animated fadeInLeft" data-wow-duration="2s">
+              Restore your confidence with our advanced hair replacement <br>
+              Designed for a completely natural look and lasting comfort.
+            </p>
+            <a href="hair-replacement-systems.html" class="btn1 wow animated fadeInUp" data-wow-duration="2s">
+              <span>Explore Hair Replacement</span>
+            </a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Slide 2 -->
+<div class="item">
+  <div class="carousel-captions caption-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="content">
+            <h2 class="wow animated fadeInLeft" data-wow-duration="1s">
+              <span>Hair Fixing Guru</span> – Professional<br>
+              <span>Hair Fixing / Bonding Solutions</span>
+            </h2>
+            <p class="wow animated fadeInLeft" data-wow-duration="2s">
+              Transform your look instantly with our expert hair fixing and bonding services.<br>
+              Get a fuller, natural appearance that boosts your confidence.
+            </p>
+            <a href="hair-fixing-bonding.html" class="btn1 wow animated fadeInUp" data-wow-duration="2s">
+              <span>Book Hair Fixing Service</span>
+            </a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Slide 3 -->
+<div class="item">
+  <div class="carousel-captions caption-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="content">
+            <h2 class="wow animated fadeInLeft" data-wow-duration="1s">
+              <span>Hair Fixing Guru</span> – Specialized in<br>
+              <span>Hair Clipping / Taping / Weaving</span>
+            </h2>
+            <p class="wow animated fadeInLeft" data-wow-duration="2s">
+              Experience our advanced hair styling techniques including clipping,<br>
+              taping, and weaving – for a flawless and customized look.
+            </p>
+            <a href="hair-clipping.html" class="btn1 wow animated fadeInUp" data-wow-duration="2s">
+              <span>Try Hair Weaving & Styling</span>
+            </a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✅ Carousel Indicators -->
+<ol class="carousel-indicators">
+  <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+    <span class="number">1</span><span class="con">Replacement</span>
+  </li>
+  <li data-target="#carousel-example-generic" data-slide-to="1">
+    <span class="number">2</span><span class="con">Bonding</span>
+  </li>
+  <li data-target="#carousel-example-generic" data-slide-to="2">
+    <span class="number">3</span><span class="con">Weaving</span>
+  </li>
+</ol>
+
+
+            </div>
+        </div>
+    </section>
+    <!--Slider area end here-->
+    <!--Info area start here-->
+   <section class="info-area-one">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Men's Section -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pd-0">
+                <div class="info-list">
+                    <figure>
+                        <img src="images/about/hairfixing.jpg" alt="Men's Hair Fixing" />
+                        <div class="content">
+                            <h2>Men’s Hair Transformation</h2>
+                            <a href="hair-replacement-systems.html">View Services <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Center Section -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pd-0">
+                <div class="info-middel text-center bg-img jarallax">
+                    <div class="info-logo">
+                        <a href="index.html"><img src="images/logo/hairfixingguru.jpg" alt="Hair Fixing Guru Logo" height="180px" width="100px"/></a>
+                    </div>
+                    <div class="content">
+                        <div class="section-heading-one">
+                            <h2>Welcome to Hair Fixing Guru</h2>
+                        </div>
+                       <p>Hair Fixing Guru is a trusted name dedicated to helping individuals regain their confidence and style through advanced hair solutions. With a commitment to quality, innovation, and personalized care, we focus on delivering natural-looking results that enhance your appearance and self-esteem. Our expert team ensures every client experiences comfort, satisfaction, and a renewed sense of confidence.</p>
+                        
+                        <a href="about.html" class="btn1"><span>Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Women's Section -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pd-0">
+                <div class="info-list">
+                    <figure>
+                        <img src="images/about/haircliping.jpg" alt="Women's Hair Replacement" />
+                        <div class="content">
+                            <h2>Women’s Hair Transformation</h2>
+                            <a href="hair-clipping.html">View Services <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--Info area end here-->
+    <!--Services area start here-->
+<section class="services-area-one bg-img jarallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+        <div class="services-slider">
+
+          <!-- Hair Replacement Systems -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="services-list text-center">
+              <div class="icons"><i class="fa-solid fa-hands-bubbles fa-3x"></i></div>
+              <h4>Hair Replacement</h4>
+              <p>Experience customized hair replacement designed for a natural, confident look.</p>
+              <a href="hair-replacement-systems.html">Read More <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Hair Fixing / Bonding -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="services-list text-center">
+              <div class="icons"><i class="fa-solid fa-handshake fa-3x"></i></div>
+              <h4>Hair Fixing / Bonding</h4>
+              <p>Get instant transformation with professional hair fixing and bonding solutions for a seamless style.</p>
+              <a href="hair-fixing-bonding.html">Read More <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Hair Clipping / Taping / Weaving -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="services-list text-center">
+              <div class="icons"><i class="fa-solid fa-scissors fa-3x"></i></div>
+              <h4>Hair Clipping / Taping / Weaving</h4>
+              <p>Achieve a flawless finish with expert clipping, taping, and weaving techniques tailored to you.</p>
+              <a href="hair-clipping.html">Read More <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Hair Extensions -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="services-list text-center">
+              <div class="icons"><i class="fa-solid fa-wand-magic-sparkles fa-3x"></i></div>
+              <h4>Hair Extensions</h4>
+              <p>Add instant length and volume with our premium-quality, natural-looking hair extensions.</p>
+              <a href="hair-extensions.html">Read More <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Hair Patch Maintenance & Refitting -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="services-list text-center">
+              <div class="icons"><i class="fa-solid fa-gears fa-3x"></i></div>
+              <h4>Hair Patch Maintenance & Refitting</h4>
+              <p>Keep your hair patch looking perfect with our professional maintenance and refitting services.</p>
+              <a href="hair-patch-maintenance.html">Read More <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!--Services area end here-->
+    <!--About area start here-->
+  <section class="about-area-one">
+  <div class="section-head">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="section-heading-two">
+            <h2>What We Do</h2>
+            <p>At <strong>Hair Fixing Guru</strong>, we specialize in advanced hair replacement, restoration, and styling solutions for men and women. Our mission is to help you look and feel your best with natural-looking results that match your unique personality and style.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Hair Replacement Systems -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pd-0">
+        <div class="about-list-right">
+          <figure>
+            <img src="images/about/hairreplacement.jpg" alt="Hair Replacement Systems">
+          </figure>
+          <div class="content">
+            <h4>Hair Replacement</h4>
+            <p>Custom-designed replacement that perfectly blend with your natural hair for a confident look.</p>
+            <a href="hair-replacement-systems.html">Read More <i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hair Fixing / Bonding -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pd-0">
+        <div class="about-list-right">
+          <figure>
+            <img src="images/about/hairfixing1.jpg" alt="Hair Fixing / Bonding">
+          </figure>
+          <div class="content">
+            <h4>Hair Fixing / Bonding</h4>
+            <p>Achieve a secure and natural appearance through expert hair fixing and bonding techniques.</p>
+            <a href="hair-fixing-bonding.html">Read More <i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pd-0">
+        <div class="about-list-left">
+          <div class="content">
+            <h4>Hair Extensions</h4>
+            <p>Add instant length and volume with high-quality hair extensions crafted for a seamless natural look.</p>
+            <a href="hair-extensions.html">Read More <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <figure>
+            <img src="images/about/hairextensions.jpg" alt="Hair Extensions">
+          </figure>
+        </div>
+      </div>
+      <!-- Hair Clipping / Taping / Weaving -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pd-0">
+        <div class="about-list-right">
+          <figure>
+            <img src="images/about/haircliping.jpg" alt="Hair Clipping / Taping / Weaving">
+          </figure>
+          <div class="content">
+            <h4>Hair Clipping / Taping / Weaving</h4>
+            <p>Expert clipping, taping, and weaving techniques for flawless coverage and long-lasting comfort.</p>
+            <a href="hair-clipping.html">Read More <i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+  
+
+      <!-- Hair Extensions -->
+  
+
+    
+
+      <!-- Hair Patch Maintenance & Refitting -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pd-0">
+        <div class="about-list-left">
+          <div class="content">
+            <h4>Hair Patch Maintenance & Refitting</h4>
+            <p>Maintain your perfect look with our regular hair patch maintenance, refitting, and styling support.</p>
+            <a href="hair-patch-maintenance.html">Read More <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <figure>
+            <img src="images/about/refitting.jpg" alt="Hair Patch Maintenance & Refitting">
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!--About area end here-->
+    <!--Plan and Price area start here-->
+    <section class="plan-price-area section">
+        <div class="container">
+          <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-heading-three">
+            <h2>Our Mission, Vision & Team</h2>
+            <p>At <strong>Hair Fixing Guru</strong>, we are dedicated to helping people regain their confidence through
+                advanced non-surgical hair restoration techniques. With a focus on innovation, care, and excellence, we
+                have built a reputation as one of the most trusted names in the hair replacement industry.</p>
+        </div>
+    </div>
+</div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                 <div class="plan-nav">
+    <ul role="tablist">
+        <li role="presentation" class="active">
+            <a href="#mission" role="tab" data-toggle="tab">Our Mission</a>
+        </li>
+        <li role="presentation">
+            <a href="#vision" role="tab" data-toggle="tab">Our Vision</a>
+        </li>
+        <li role="presentation">
+            <a href="#infrastructure" role="tab" data-toggle="tab">Our Infrastructure</a>
+        </li>
+        <li role="presentation">
+            <a href="#team" role="tab" data-toggle="tab">Our Team</a>
+        </li>
+    </ul>
+</div>
+                    <div class="plan-content">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="hair">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 pd-0">
+                                        <div class="plan-list-nav">
+                                          <ul>
+    <li role="presentation" class="active">
+        <a href="#mission" role="tab" data-toggle="tab">
+            <span class="imgs"><img src="images/price/1.png" alt="Mission"></span>
+            <span class="con">Mission</span>
+        </a>
+    </li>
+    <li role="presentation">
+        <a href="#vision" role="tab" data-toggle="tab">
+            <span class="imgs"><img src="images/price/2.png" alt="Vision"></span>
+            <span class="con">Vision</span>
+        </a>
+    </li>
+    <li role="presentation">
+        <a href="#infrastructure" role="tab" data-toggle="tab">
+            <span class="imgs"><img src="images/price/3.png" alt="Infrastructure"></span>
+            <span class="con">Infrastructure</span>
+        </a>
+    </li>
+    <li role="presentation">
+        <a href="#team" role="tab" data-toggle="tab">
+            <span class="imgs"><img src="images/price/4.png" alt="Team"></span>
+            <span class="con">Our Team</span>
+        </a>
+    </li>
+    <li role="presentation">
+        <a href="#training" role="tab" data-toggle="tab">
+            <span class="imgs"><img src="images/price/5.png" alt="Training"></span>
+            <span class="con">Training</span>
+        </a>
+    </li>
+    <li role="presentation">
+        <a href="#support" role="tab" data-toggle="tab">
+            <span class="imgs"><img src="images/price/6.png" alt="Support"></span>
+            <span class="con">Customer Support</span>
+        </a>
+    </li>
+</ul>
+                                        </div>
+                                    </div>
+                                 <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 pd-l0 price-list">
+    <div class="tab-content">
+
+        <!-- Mission -->
+        <div role="tabpanel" class="tab-pane active" id="mission">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-l45 pd-r15">
+                    <ul>
+                        <li>
+                           <h4>Empowering Confidence Through Hair Restoration</h4>
+<p>At <strong>Hair Fixing Guru</strong>, our mission goes beyond restoring hair — we restore confidence, self-esteem, and happiness. With a passion for excellence and attention to every detail, we create natural-looking, comfortable, and long-lasting hair solutions that help you look and feel your absolute best.</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-r45 pd-l15">
+                    <ul>
+                       <li>
+    <h4>Personalized Hair Solutions</h4>
+    <p>We believe in delivering customized hair replacement  designed to match your individual style, appearance, and comfort — ensuring complete satisfaction and lasting confidence.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision -->
+        <div role="tabpanel" class="tab-pane" id="vision">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-l45 pd-r15">
+                    <ul>
+                       <li>
+    <h4>To Be India’s No.1 Hair Restoration Brand</h4>
+    <p>Our vision is to lead the hair restoration industry with innovation, excellence, and trust — offering world-class solutions that are accessible and reliable for everyone.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-r45 pd-l15">
+                    <ul>
+                        <li>
+                            <h4>Global Recognition for Quality and Care</h4>
+                            <p>We aspire to be recognized globally for transforming lives through advanced, pain-free, and long-lasting hair restoration systems built with care and precision.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div role="tabpanel" class="tab-pane" id="infrastructure">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-l45 pd-r15">
+                    <ul>
+                      <li>
+    <h4>Modern Hair Fixing Studios</h4>
+    <p>At <strong>Hair Fixing Guru</strong>, our state-of-the-art studios feature contemporary interiors, private cabins, and world-class equipment — offering a luxurious, comfortable, and confidence-boosting experience every time.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-r45 pd-l15">
+                    <ul>
+                       <li>
+    <h4>Cutting-Edge Technology & Hygiene</h4>
+    <p>At <strong>Hair Fixing Guru</strong>, we use advanced bonding technology and international-grade products to ensure exceptional results with uncompromised quality, safety, and hygiene standards.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div role="tabpanel" class="tab-pane" id="team">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-l45 pd-r15">
+                    <ul>
+                       <li>
+    <h4>Expert Hair Specialists</h4>
+    <p>At <strong>Hair Fixing Guru</strong>, our certified hair specialists are professionally trained in the latest replacement, bonding, and maintenance techniques — delivering natural-looking, flawless results every time.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-r45 pd-l15">
+                    <ul>
+                       <li>
+    <h4>Dedicated Client Support Team</h4>
+    <p>At <strong>Hair Fixing Guru</strong>, our friendly and professional support team ensures a seamless experience — from consultation to aftercare — with personalized assistance, maintenance reminders, and continuous follow-ups.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Training -->
+        <div role="tabpanel" class="tab-pane" id="training">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-l45 pd-r15">
+                    <ul>
+                        <li>
+                            <h4>Continuous Skill Development</h4>
+                            <p>We believe learning never stops. Our experts undergo regular workshops and global training programs to stay updated with the latest techniques in hair restoration.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-r45 pd-l15">
+                    <ul>
+                        <li>
+                            <h4>Global Certification Standards</h4>
+                            <p>Our professionals are trained under international standards and certified in advanced non-surgical hair replacement methods for best-in-class service quality.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Support -->
+        <div role="tabpanel" class="tab-pane" id="support">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-l45 pd-r15">
+                    <ul>
+                        <li>
+                            <h4>24x7 Customer Support</h4>
+                            <p>We provide dedicated assistance before and after every hair fixing procedure, helping you with maintenance, styling, and product care tips anytime you need.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="planprice pd-r45 pd-l15">
+                    <ul>
+                       <li>
+    <h4>Aftercare & Maintenance Programs</h4>
+    <p>At <strong>Hair Fixing Guru</strong>, our specialized aftercare programs keep your hair system looking natural, healthy, and stylish — with routine checkups, expert guidance, and long-lasting confidence.</p>
+</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Plan and Price area end here-->
+    <!--Team area start here-->
+<section class="team-area section bg-img jarallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-heading-two">
+          <h2>Meet Our Founder</h2>
+          <p>
+            At Hair Fixing Guru, our mission is to help individuals regain their confidence with
+            natural-looking hair replacement solutions. Under the leadership of our founder, we
+            provide expert services in hair bonding, clipping, weaving, and non-surgical hair systems
+            that deliver realistic and lasting results.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+        <div class="team-con">
+
+          <!-- Founder -->
+          <div class="team-con-list">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="con-img">
+                <figure>
+                  <img src="images/team/aman.jpg" alt="Founder - Hair Fixing Guru" />
+                   <ul class="list-inline">
+                                <li><a href="https://www.facebook.com/people/Hairfixingguru/61578157739278/#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/hairfixingguru?igsh=eHlhOHRiNGtlNDQw"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://share.google/Q73RPAIVOHMNeW7Lq"><i class="fa fa-google-plus"></i></a></li>
+                              <li>
+                                   <a href="https://wa.me/917088553346" target="_blank" title="Chat on WhatsApp"> 
+                                   <i class="fa fa-whatsapp"></i>
+                                   </a> 
+                                   </li>
+ <li>
+    <a href="https://youtube.com/@hairfixingguru-c5u?si=rLcGmtcY55QqHkY6" target="_blank" title="Subscribe on YouTube">
+      <i class="fa fa-youtube-play"></i>
+    </a>
+  </li>
+                            </ul>
+                </figure>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+              <div class="team-content">
+                <span class="top-co">Founder</span>
+                <h3><a href="#">Aman Batra</a></h3>
+                <p>
+                  With over 10 years of experience in hair restoration and replacement, Aman Batra
+                  founded Hair Fixing Guru with a passion to transform lives through non-surgical,
+                  natural-looking hair solutions. His expertise in advanced bonding and system
+                  customization ensures every client achieves a confident, flawless appearance.
+                </p>
+                <ul class="list-inline">
+                  <li>
+                    <span class="imgs"><img src="images/icons/2.png" alt=""></span>
+                    <span class="con">+91-7088553346</span>
+                  </li>
+                  <li>
+                    <span class="imgs"><img src="images/icons/3.png" alt=""></span>
+                    <span class="con">aman@hairfixingguru.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- End Founder -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!--Team area end here-->
+    <!--Banner area start here-->
+  <section class="banner-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="content-ban">
+          <h2>
+            <img src="images/icons/4.png" alt="" />
+            <span>Patches Starting at ₹2999</span>
+          </h2>
+          <a href="https://wa.me/917088553346?text=Hi!%20I%20want%20to%20grab%20the%20offer%20for%20hair%20patches." class="btn2" target="_blank">
+            <span>Grab Offer</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--Banner area end here-->
+    <!--Shop area start here-->
+   <section class="shop-area bg-img section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading-three text-center">
+                    <h2>Our Products</h2>
+                    <p>Explore premium Hair Fixing Guru products — trusted by professionals for hair care, styling, and restoration.</p>
+                </div>
+            </div>
+        </div>
+
+       <div class="row">
+  <div class="col-lg-12 pd-0">
+    <div class="shop-slider">
+ <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairwingsformen.jpg" alt="Hair Wigs Female" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <h4>Hair Wigs (Female)</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Wigs%20(Female)" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+       <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairtopperformen.jpg" alt="Hair Topper For Girls" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <h4>Hair Topper (For Men)</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Topper%20(For%20Girls)" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 1 -->
+      <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairclipingextension.jpg" alt="Hair Clipping Extensions" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              
+            </ul>
+            <h4>Hair Clipping Extensions</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Clipping%20Extensions" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairextension.jpg" alt="Hair Extensions" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <h4>Hair Extensions</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Extensions" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairwingsfemale.jpg" alt="Hair Wigs Female" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <h4>Hair Wigs (Female)</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Wigs%20(Female)" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairpathesman.jpg" alt="Hair Patches Man" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <h4>Hair Patches (Men)</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Patches%20(Men)" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-lg-12">
+        <div class="shop-list">
+          <figure>
+            <img src="images/shop/hairtopperforgirl.jpg" alt="Hair Topper For Girls" />
+          </figure>
+          <div class="content">
+            <ul class="list-inline">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <h4>Hair Topper (For Girls)</h4>
+            <a href="https://wa.me/917088553346?text=I%20want%20to%20order%20Hair%20Topper%20(For%20Girls)" class="btn3" target="_blank">
+              <span>Add to Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- shop-slider end -->
+  </div>
+</div>
+
+    </div>
+</section>
+
+    <!--Shop area end here-->
+    <!--Counter area start here-->
+   <section class="counter-area bg-img section3 jarallax">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <div class="counter-list">
+                  
+                    <span class="count">1000+</span>
+                    <h4>Hair Patches Fixed</h4>
+                </div>
+
+                <div class="counter-list">
+                  
+                    <span class="count">10+</span>
+                    <h4>Years of Experience</h4>
+                </div>
+
+                <div class="counter-list">
+                  
+                    <span class="count">2000+</span>
+                    <h4>Happy Clients</h4>
+                </div>
+
+                <div class="counter-list">
+                   
+                    <span class="count">20+</span>
+                    <h4>Expert Technicians</h4>
+                </div>
+
+                <div class="counter-list">
+                 
+                    <span class="count">2</span>
+                    <h4>Cities Served</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--Counter area end here-->
+    <!--Testimonial area start here-->
+<section class="testimonial-area bg-img section jarallax">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+                <div class="testimonial-slider">
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="testimonial-list">
+                            <blockquote>"I was amazed by how natural the Hair Replacement  looks and feels! The team at Hair Fixing Guru perfectly matched my hair texture and style — it’s truly life-changing."</blockquote>
+                            <h4><a href="#">~ Rajesh Verma ~</a></h4>
+                            <span>(Businessman)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="testimonial-list">
+                            <blockquote>"Their Hair Fixing and Bonding services are outstanding! I got my confidence back the same day — the results look completely real and effortless."</blockquote>
+                            <h4><a href="#">~ Neha Sharma ~</a></h4>
+                            <span>(Software Engineer)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="testimonial-list">
+                            <blockquote>"I opted for Hair Clipping and Volumizing, and I couldn’t believe the difference it made! My hair looks fuller and perfectly styled every single day."</blockquote>
+                            <h4><a href="#">~ Arjun Patel ~</a></h4>
+                            <span>(Model & Influencer)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="testimonial-list">
+                            <blockquote>"From Hair Extensions to Patch Maintenance, Hair Fixing Guru delivers top-quality service every time. Their aftercare support and professionalism are exceptional."</blockquote>
+                            <h4><a href="#">~ Priya Nair ~</a></h4>
+                            <span>(Marketing Executive)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--Testimonial area end here-->
+    <!--Gallery area start here-->
+    <section class="gallery-area">
+        <div class="section-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-heading-two">
+                            <h2>Our Gallery</h2>
+                        <p>Hair Fixing Guru was established with a vision to help people regain their confidence through advanced hair restoration solutions. Our expert team specializes in natural-looking hair fixing, hair bonding, and hair replacement services for both men and women.</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+        <div class="gallery-slider" id="gallery">
+            
+            <div class="gallery-list">
+                <figure>
+                    <a href="images/gallery/1.jpg">
+                        <img src="images/gallery/1.jpg" alt="Hair Fixing Result 1" />
+                        <span><i class="fa fa-search"></i></span>
+                    </a>
+                </figure>
+            </div>
+
+            <div class="gallery-list">
+                <figure>
+                    <a href="images/gallery/2.jpg">
+                        <img src="images/gallery/2.jpg" alt="Hair Fixing Result 2" />
+                        <span><i class="fa fa-search"></i></span>
+                    </a>
+                </figure>
+            </div>
+
+            <div class="gallery-list">
+                <figure>
+                    <a href="images/gallery/3.jpg">
+                        <img src="images/gallery/3.jpg" alt="Hair Fixing Result 3" />
+                        <span><i class="fa fa-search"></i></span>
+                    </a>
+                </figure>
+            </div>
+
+            <div class="gallery-list">
+                <figure>
+                    <a href="images/gallery/4.jpg">
+                        <img src="images/gallery/4.jpg" alt="Hair Fixing Result 4" />
+                        <span><i class="fa fa-search"></i></span>
+                    </a>
+                </figure>
+            </div>
+
+            <div class="gallery-list">
+                <figure>
+                    <a href="images/gallery/5.jpg">
+                        <img src="images/gallery/5.jpg" alt="Hair Fixing Result 5" />
+                        <span><i class="fa fa-search"></i></span>
+                    </a>
+                </figure>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+    <!--Gallery area end here-->
+    <!--Blog area start here-->
+  
+    <!--Blog area end here-->
+    <!--Booking area start here-->
+  <section class="booking-area">
+    <div class="container">
+        <div class="row">
+            <!-- Opening Time Section -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="booking-time">
+                   <div class="heading">
+    <h2>Our Timings</h2>
+    <p>At Hair Fixing Guru, we’re dedicated to helping you look and feel confident every day. Visit us during our working hours for expert hair replacement, bonding, and fixing services — tailored to your style and comfort.</p>
+</div>
+
+                    <div class="booking-days">
+                        <ul>
+                            <li><strong>Sunday</strong><span>10:00 AM – 8:00 PM</span></li> 
+                            <span style="color: #ffffff; font-size: 30px;">to</span>
+                            <li><strong>Saturday</strong><span>10:00 AM – 8:00 PM</span></li>
+                           
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form Section -->
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-md-offset-1">
+                <div class="booking-form bg-img">
+                    <div class="heading">
+                        <h2>Book Your Appointment</h2>
+                        <p>Get a free consultation with our experts and experience a confident new look!</p>
+                    </div>
+                  <form id="whatsappForm">
+  <fieldset><input type="text" id="name" placeholder="Full Name *" required></fieldset>
+  <fieldset><input type="email" id="email" placeholder="Email Address *" required></fieldset>
+  <fieldset><input type="tel" id="phone" placeholder="Phone Number *" required></fieldset>
+  <fieldset><input type="text" id="date" placeholder="Preferred Date (mm/dd/yyyy)" required></fieldset>
+  <fieldset><textarea id="message" placeholder="Tell us about your hair concern"></textarea></fieldset>
+  <button class="btn1" type="submit"><span>Submit Now</span></button>
+</form>
+
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Get values safely
+    const name = encodeURIComponent(document.getElementById("name").value.trim());
+    const email = encodeURIComponent(document.getElementById("email").value.trim());
+    const phone = encodeURIComponent(document.getElementById("phone").value.trim());
+    const date = encodeURIComponent(document.getElementById("date").value.trim());
+    const message = encodeURIComponent(document.getElementById("message").value.trim());
+
+    // Create formatted WhatsApp message
+    const whatsappMessage = `*New Hair Consultation Request*%0A%0A` +
+      `*Full Name:* ${name}%0A` +
+      `*Email:* ${email}%0A` +
+      `*Phone:* ${phone}%0A` +
+      `*Preferred Date:* ${date}%0A` +
+      `*Hair Concern:* ${message}`;
+
+    // Replace with your WhatsApp number (no + sign or spaces)
+    const phoneNumber = "917088553346";
+
+    // Open WhatsApp
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+    window.open(whatsappURL, "_blank");
+  });
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--Booking area end here-->
+    <!--Brand area start here-->
+    <section class="brand-area section bg-img jarallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="section-heading-three">
+    <h2>Our Brand Partners</h2>
+    <p>Hair Fixing Guru proudly collaborates with leading global brands in hair systems and cosmetic solutions. Our trusted partners help us deliver the highest quality, natural-looking, and long-lasting hair restoration results for our clients.</p>
+</div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+                    <div class="brand-slider">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/1.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/2.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/3.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/4.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/5.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/6.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/1.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="brand-list">
+                                <a href="#"><img src="images/client/2.png" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Brand area end here-->
+    <!--Map area start here-->
+    <div class="map-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
+                    <div class="map-area">
+                    <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.785897879036!2d77.684482!3d28.984463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c7b9f04e8f5a9%3A0x1b7b0bb5e4bb5bdb!2sMeerut%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1730443450001!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Map area end here-->
+    <!--Banner area start here-->
+    <section class="banner-area-two bg-img jarallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="banner-img">
+                        <img src="images/about/hairexpert.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="col-lg6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="banner-con">
+                    <h2>Do you like our hair experts?</h2>
+<p>At Hair Fixing Guru, our team of skilled professionals ensures every client leaves with renewed confidence and a natural look. We specialize in advanced hair fixing and hair replacement solutions trusted by thousands across India.</p>
+
+
+                        <a href="#" class="btn1"><span>Read MOre</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Banner area end here-->
+    <!--Footer area start here-->
+  <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="foo-about">
+                            <div class="foo-logo">
+                                <a href="#"><img src="images/logo/hairfixingguru.jpg" alt="hairfixingguru" height="80px" width="100px"></a>
+                            </div>
+                          <div class="content">
+    <p>Hair Fixing Guru was founded with the vision of restoring confidence through expert hair solutions.</p>
+    <span>+91 7088553346</span>
+    <p>We specialize in natural-looking hair fixing, bonding, and replacement — trusted by clients across India.</p>
+    <a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+</div>
+
+
+                            <ul class="list-inline">
+                                <li><a href="https://www.facebook.com/people/Hairfixingguru/61578157739278/#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/hairfixingguru?igsh=eHlhOHRiNGtlNDQw"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://share.google/Q73RPAIVOHMNeW7Lq"><i class="fa fa-google-plus"></i></a></li>
+                              <li>
+                                   <a href="https://wa.me/917088553346" target="_blank" title="Chat on WhatsApp"> 
+                                   <i class="fa fa-whatsapp"></i>
+                                   </a> 
+                                   </li>
+ <li>
+    <a href="https://youtube.com/@hairfixingguru-c5u?si=rLcGmtcY55QqHkY6" target="_blank" title="Subscribe on YouTube">
+      <i class="fa fa-youtube-play"></i>
+    </a>
+  </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                       <div class="weight foo-link">
+    <h3>Popular Services</h3>
+    <ul>
+  <li><a href="hair-replacement-systems.html"><i class="fa fa-angle-double-right"></i><span>Hair Replacement</span></a></li>
+  <li><a href="hair-fixing-bonding.html"><i class="fa fa-angle-double-right"></i><span>Hair Fixing / Bonding</span></a></li>
+  <li><a href="hair-clipping.html"><i class="fa fa-angle-double-right"></i><span>Hair Clipping / Taping / Weaving</span></a></li>
+  
+  <li><a href="hair-extensions.html"><i class="fa fa-angle-double-right"></i><span>Hair Extensions</span></a></li>
+
+  <li><a href="hair-patch-maintenance.html"><i class="fa fa-angle-double-right"></i><span>Hair Patch Maintenance & Refitting</span></a></li>
+</ul>
+
+</div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="weight insta">
+                            <h3>Instagram Feed</h3>
+                            <ul class="list-inline">
+                                <li><a href="#"><img src="images/instagram/1.jpg" alt=""><span><i class="fa fa-search"></i></span></a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="top-link-button text-center">
+                            <a id="scrollUp" href="#top"><i class="fa fa-angle-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                       <div class="copyright text-center">
+    <p>Copyright © Hair Fixing Guru 2025-26. All rights reserved.</p>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer area end here-->
+
+
+    <!-- all js here -->
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- tether js -->
+    <script src="js/tether.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- bxslider js -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <!-- isotope js -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- magnific popup js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- jarallax js -->
+    <script src="js/jarallax.min.js"></script>
+    <!-- jquery-ui js -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- Bootstrap Touchspin JavaScript -->
+    <script src="js/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <!-- plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+
+
+</html>
